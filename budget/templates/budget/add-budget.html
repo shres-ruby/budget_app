@@ -1,0 +1,38 @@
+{% extends 'budget/base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="add_budget" class="container">
+    <form action="" method="POST">
+        
+        {% csrf_token %}
+        <label for="id_name">Month name:</label>
+        <input type="text" name="name" id="id_name">
+        <label for="id_budget">Total monthly budget:</label>
+        <input type="number" name="budget" id="id_budget">
+        <label for="categoryInput">Expense categories (hit enter after every category)</label>
+        <input type="text" name="categoryInput" id="categoryInput">
+        <input type="hidden" name="categoriesString">
+
+        <ul id="categoriesContainer">
+            
+        </ul>
+
+        <label for="userInput">Add users (hit enter after every user name)</label>
+        <input type="text" name="userInput" id="userInput">
+        <input type="hidden" name="usersString">
+
+        <ul id="usersContainer">
+           
+        </ul>
+
+        <button type="submit" class="btn">Start Budget</button>
+
+
+    </form>
+
+</div>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %}

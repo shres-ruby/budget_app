@@ -1,0 +1,16 @@
+{% extends 'budget/base.html' %}
+{% block content %}
+
+<div class="container">
+
+    <div class="noproject-wrapper center">
+        <h3 class="">Let's start budgeting!</h3>
+        <a href="{% url 'add-budget' %}" class="btn-large green">
+            <i class="material-icons white-text left">add_circle</i>
+            <span class="bold">Add Budget</span>
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}
